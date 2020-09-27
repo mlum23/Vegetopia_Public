@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="./css/nav_bar.css">
+    <link rel="stylesheet" type="text/css" href="./css/submit_order.css">
+    <script src="https://www.gstatic.com/firebasejs/5.8.5/firebase.js"></script>
+    <script src="./js/database.js"></script>
+    <script src="./js/navBar.js"></script>
+</head>
+
+<body>
+    <div id="nav_container"></div>
+
+    <div id="detail">
+        <div style="margin-left: 2%">
+            <h3>Payment Information:</h3>
+            <h4>Payment Option:
+                <select id="payment_filter" onchange="payment_option()">
+                    <option value="">...</option>
+                    <option value="credit_card">Credit Card</option>
+                    <option value="paypal">PayPal</option>
+                </select>
+            </h4>
+            <br>
+            <div id="pay_by_cc">
+                <div id="cc_number"><b>Credit Card Number: </b></div>
+                <div id="name"><b>Name on The Card:</b> </div>
+                <div id="cc_expiry"><b>Expiry Date: </b></div>
+                <div id="ccv"><b>CVV Number: </b></div>
+            </div>
+            <div id="pay_by_paypal">
+                <div id="paypal_email"><b>PayPal Email: </b></div>
+            </div>
+            <div>
+                <h3>Billing Address:</h3>
+                <br>
+                <div id="address"><b>Address: </b></div>
+                <div id="bill_city"><b>City: </b></div>
+                <div id="bill_prov"><b>State/Province/Region: </b></div>
+                <div id="bill_zip"><b>Postal Code/Zip: </b></div>
+                <div id="bill_phone"><b>Telephone Number: </b></div>
+            </div>
+        </div>
+        <span id="address_title">
+
+        </span>
+        <button id="update_info" style="margin-left: 40%; margin-top: 10%;">Update Info</button>
+    </div>
+
+
+
+    <div id="summary_table">
+        <h3 id="cant_submit">(message)</h3>
+        <table>
+            <h3 style="margin-top:18px;">Summary</h3>
+            <div id="table_container"></div>
+        </table>
+        <div id="delivery_type">
+            <h3>Choose One</h3>
+            <form action="javascript:submitted();">
+                <input type="radio" name="method" value="Delivery" required>Delivery
+                <input type="radio" name="method" value="Pick up">Pick up
+                <br><br>
+                <input id="place_order" type="submit" value="Place Your Order">
+            </form>
+
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("nav_container").innerHTML = navBar;
+    </script>
+    <script src="./js/submit_order.js"></script>
+</body>
+
+</html>

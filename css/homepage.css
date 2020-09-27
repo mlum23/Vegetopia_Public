@@ -1,0 +1,144 @@
+a:hover {
+    animation-fill-mode: forwards;
+}
+
+h4 {
+  padding-top: 5px;
+}
+
+#title {
+    text-align: center;
+    display: "inline";
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center; 
+}
+
+
+.potw {
+    position: fixed;
+    text-align: center;
+    display: relative;
+    padding: 100px;
+    margin-left: 5%;
+    height: 50%;
+    width: 20%;
+}
+
+.chicken {
+    position: fixed;
+    text-align: center;
+    display: relative;
+    padding: 100px;
+    margin-left: 30%;
+    height: 50%;
+    width: 20%;
+}
+
+.veggies {
+    position: fixed;
+    text-align: center;
+    display: relative;
+    padding: 100px;
+    margin-left: 55%;
+    height: 50%;
+    width: 20%;
+}
+
+#potw_content, 
+#chicken_content, 
+#veggies_content {
+    position: relative;
+    visibility: hidden;
+    width: 100%;
+}
+
+#potw_icon, 
+#chicken_icon, 
+#veggies_icon  {
+    position: relative;
+    display: inline-block;
+    border-radius: 80px;
+    border: solid;
+    border-color: black;
+    padding: 15px;
+    margin-top: 50%;
+    width: 70%;
+
+}
+
+
+
+/* Hover to move icons */
+.potw:hover #potw_icon,
+.chicken:hover #chicken_icon,
+.veggies:hover #veggies_icon {
+    animation-name: icon_animation;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+/* Hover to move content */
+.potw:hover #potw_content,
+.chicken:hover #chicken_content, 
+.veggies:hover #veggies_content {
+    visibility: visible;
+    animation-name: content_animation;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+#title_container{
+    position: absolute;
+    left: 40%;
+    top: 10%;
+    opacity: 0;
+    margin-bottom: 20%;
+    animation-name: bottomFadeOut;
+    animation-delay: 0.5s;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+#potw_container{
+  padding-top:7%; 
+}
+
+@keyframes icon_animation{
+    0%   {margin-top: 50%;}
+    100% {margin-top: -15%;}
+
+}
+
+  @keyframes content_animation{
+
+    0%   {height: 10%;}
+    100% {height: 75%;}
+
+    0%   {background: rgba(255, 255, 255, 0.0);}
+    100% {background: rgba(255, 255, 255, 0.5);}
+
+    0%   {border-radius: 0;}
+    100% {border-radius: 80px;}
+  }
+
+  @keyframes bottomFadeOut {
+    0% {
+      position: absolute;
+      top: -5rem;
+      opacity: 0;
+    }
+  
+    75% {
+      position: absolute;
+      top: 10%;
+      opacity: 1;
+    }
+  
+    100% {
+      opacity: 1;
+    }
+    
+  }
+  

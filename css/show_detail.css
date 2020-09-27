@@ -1,0 +1,22 @@
+.mapouter {
+    float: right;
+    height: 400px;
+    width: 500px;
+    margin-top: 5%;
+    margin-right: 0%
+
+}
+
+.gmap_canvas {
+    overflow: hidden;
+    float: right;
+    background: none !important;
+    height: 400px;
+    width: 500px;
+}
+
+#info_container{
+    position: absolute;
+    left: 6%;
+    top: 10%;
+}

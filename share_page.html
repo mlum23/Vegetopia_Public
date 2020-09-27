@@ -1,0 +1,44 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://www.gstatic.com/firebasejs/5.8.5/firebase.js"></script>
+    <script src="./js/database.js"></script>
+    <script src="./js/navBar.js"></script>
+    <script src="./js/list_share_pages.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="./css/nav_bar.css">
+    <link rel="stylesheet" type="text/css" href="./css/list_item.css">
+</head>
+
+<body>
+    <div id="nav_container"></div>
+    <div id="share_links" style="position:absolute; top:25%; left:50%;"></div>
+    <script>
+        document.getElementById("nav_container").innerHTML = navBar;
+        let dbref = firebase.database().ref("share/"); dbref.once("value", function (snapshot) {
+            let list = snapshot.val(); // dictionary let keys=Object.keys(list); // list of keys 
+            let keys = Object.keys(list);
+            for (let i = 0; i < keys.length; i++) {
+                let link_to_page = document.createElement("a");
+                link_to_page.className = "shareLink";
+                link_to_page.innerHTML = list[keys[i]].title;
+                link_to_page.onclick = function () {
+                    localStorage.setItem("share_title", list[keys[i]].title);
+                    localStorage.setItem("share_meetup", list[keys[i]].meetup);
+                    localStorage.setItem("share_desciption", list[keys[i]].description);
+                    window.location = "share_detail.html";
+
+                }
+                document.getElementById("share_links").append(link_to_page);
+            }
+
+
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Confirmation Page</title>
+    <link rel="stylesheet" type="text/css" href="./css/nav_bar.css">
+    <link rel="stylesheet" type="text/css" href="./css/confirmation_page.css">
+    <script src="https://www.gstatic.com/firebasejs/5.8.5/firebase.js"></script>
+    <script src="./js/database.js"></script>
+    <script src="./js/homepage_potw.js"></script>
+    <script src="./js/navBar.js"></script>
+</head>
+
+<body>
+    <div id="nav_container"></div>
+
+    <div id="image">
+        <div id="image1">
+        </div>
+    </div>
+    <div id="description"><br>
+        Description<br><br><br><br><br><br>Quantity:<span id="quantity">1</span>
+        <br><br><br><span id="price">Price:</span>
+    </div>
+    <p id="total">Total:</p>
+    <button id="add_to_cart">Confirm And Continue</button>
+
+    <script>
+        document.getElementById("nav_container").innerHTML = navBar;
+    </script>
+</body>
+
+</html>

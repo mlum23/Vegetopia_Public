@@ -1,0 +1,104 @@
+@keyframes topFadeOut {
+    0% {
+        position: absolute;
+        top: -3rem;
+        opacity: 0;
+    }
+
+    75% {
+        position: absolute;
+        top: 15%;
+        opacity: 1;
+    }
+
+    100% {
+        top: 15%;
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+    }
+
+    45% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+html {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    background: url("../images/sprouts.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+
+.box{
+    padding-bottom: 4vmax;
+}
+
+#info_container {
+    font-size: 2.5vmax;
+    padding-top: 16vmax;
+    text-align: center;
+    animation-name: fadeInOut; 
+    animation-delay: 0.5s;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+#welcome {
+    font-size: 4.4vmax;
+    position: absolute;
+    margin-left: 40%;
+    opacity: 0;
+    animation-name: topFadeOut;
+    animation-fill-mode: forwards;
+    animation-duration: 2s;
+}
+
+#buttons_container{
+    margin-top: 4.4vmax;
+
+}
+
+button:hover{
+    cursor: pointer;
+    background: rgb(89, 182, 95);
+}
+
+button{
+    text-align: center;
+    display: inline-block;
+    width: 15vmax;
+    height: 5vmax;
+    font-size: 2vmax;
+    background: #88B58B;
+    color: white;
+    outline: none
+}
+
+@media only screen and (max-width: 600px) {
+    button{
+        font-size: 1vmax;
+    }
+    #welcome {
+        font-size: 4.4vmax;
+        position: absolute;
+        margin-left: 30%;
+       
+    }
+} 

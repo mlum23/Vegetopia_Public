@@ -1,0 +1,100 @@
+/* top = x*(256) + 144 (where x = 0, 1, ... is the number of produces) */
+       
+.product_box {
+    position: absolute;
+    width: 1213px;
+    height: 219px;
+    left: 194px;
+    /* top: 144px;  dynamicaly make this */
+
+    background: #C4C4C4;
+    border-radius: 40px;
+}
+
+#prod2 {
+    position: absolute;
+    width: 1213px;
+    height: 219px;
+    left: 194px;
+    top: 400px;
+
+    background: #C4C4C4;
+    border-radius: 40px;
+}
+
+#prod3 {
+    position: absolute;
+    width: 1213px;
+    height: 219px;
+    left: 194px;
+    top: 656px;
+
+    background: #C4C4C4;
+    border-radius: 40px;
+}
+
+/* image box */
+#img_prod1,
+#img_prod2,
+#img_prod3 {
+    position: absolute;
+    width: 289px;
+    height: 191px;
+    left: 14px;
+    top: 14px;
+
+    background: black;
+    border-radius: 30px;
+}
+
+/* description box */
+#description_prod1,
+#description_prod2,
+#description_prod3 {
+    position: absolute;
+    left: 320px;
+    top: 127px;
+}
+
+.description_text {
+    position: absolute;
+    width: 750px;
+    height: 50px;
+    top: 30px;
+    background: green;
+}
+
+/* Price box */
+#price_prod1,
+#price_prod2,
+#price_prod3 {
+    position: absolute;
+    left: 320px;
+    top: 14px;
+}
+
+/* Price box */
+.price_text {
+    position: absolute;
+    width: 200px;
+    height: 75px;
+    top: 30px;
+    background: green;
+}
+
+.add_to_cart_button {
+    position: absolute;
+    right: 35px;
+    top: 28px;
+    background: #828282;
+    border-radius: 35px;
+    padding: 20px;
+    cursor: pointer;
+}
+
+/* expand button */
+.expand {
+    position: absolute;
+    right: 70px;
+    bottom: 20px;
+}

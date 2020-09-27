@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="./css/nav_bar.css">
+    <link rel="stylesheet" type="text/css" href="./css/update_profile.css">
+    <script src="https://www.gstatic.com/firebasejs/5.8.5/firebase.js"></script>
+    <script src="./js/database.js"></script>
+    <script src="./js/navBar.js"></script>
+    <script src="./js/update_profile.js"></script>
+    <title>Document</title>
+
+</head>
+
+<body>
+    <div id="nav_container"></div>
+    <div id="added" style="text-align: center;"></div>
+    
+
+    <div id="form_container">
+        <h1>Update Profile Information</h1>
+        <h4><mark>(Leave blank if no change)</mark></h4>
+
+        <form id="update_form">
+            <h3>Full Name:</h3>
+            <input id="name" type="text" name="name">
+
+            <h3>Email:</h3>
+            <input id="email" type="text" name="email">
+
+            <h3>Payment Method:</h3>
+            <select id="payment_filter" onchange="payment_option()">
+                <option value="">...</option>
+                <option value="credit_card">Credit Card</option>
+                <option value="paypal">PayPal</option>
+            </select>
+            <div id="billing">
+                    <h2>Billing Information</h2>
+
+                    <h3>Address for Delivery</h3>
+                    <input id="address" type="text" name="address">
+
+                    <h3>City</h3>
+                    <input id="bill_city" type="text" name="bill_city">
+
+                    <h3>Province/State</h3>
+                    <input id="bill_prov" type="text" name="bill_prov">
+
+                    <h3>ZIP Code</h3>
+                    <input id="bill_zip" type="text" name="bill_zip">
+
+                    <h3>Phone Number</h3>
+                    <input id="bill_phone" type="text" name="bill_phone">
+
+            </div>
+            <div id="cc">
+                <h2>Credit Card Information</h2>
+
+                <h3>Card Number:</h3>
+                <input id="cc_num" type="text" name="card_number">
+
+                <h3>Expiry Date:</h3>
+                <input id="exp" type="text" name="expiry">
+
+                <h3>CVV</h3>
+                <input id="ccv" type="text" name="ccv">
+            </div>
+
+            <div id="paypal">
+                <h2>PayPal Information</h2>
+
+                <h3>PayPal Email:</h3>
+                <input id="ppe" type="text" name="paypal_email">
+            </div>
+    </div>
+
+    <br><br>
+    <input id="t" type="button" value="Save Changes" onclick="update()">
+
+    </form>
+    <script>
+        document.getElementById("nav_container").innerHTML = navBar;
+
+    </script>
+</body>
+
+</html>

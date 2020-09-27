@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Product Detail</title>
+    <link rel="stylesheet" type="text/css" href="./css/nav_bar.css">
+    <link rel="stylesheet" type="text/css" href="./css/details_page.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://www.gstatic.com/firebasejs/5.8.5/firebase.js"></script>
+    <script src="./js/database.js"></script>
+    <script src="./js/navBar.js"></script>
+
+    <style>
+        
+    </style>
+</head>
+
+<body style="zoom:90%">
+    <div id="nav_container"></div>
+    <div id="added">Item added to cart</div>
+    <div id="left_box">
+        <div id="image"></div>
+        <div style="top:40%; left: 10%; position:absolute;">
+
+            <div>
+                <div id="c2" style="margin-left: 15%">
+                    <div style="font-size: 1.25vmax; font-weight: bold">Quanitity</div>
+                    <br>
+
+                    <button id="add">+</button>
+                    <span id="quantity" style="font-size: 1.15vmax">1</span>
+                    <button id="negate">-</button><br><br>
+                </div>
+
+            </div>
+
+            <div id="soldby">Sold by:</div>
+            <div id="Seller" style="font-size: 1.5vmax; font-weight: bold;"></div>
+
+        </div>
+    </div>
+    <div id="info_box">
+        <div id="prod_name" style="font-size: 3vmax"></div>
+        <br>
+        <div id="descrp" style="font-size: 1.5vmax"></div>
+        <div id="price" style="font-size: 2vmax; padding-top: 5%;"></div>
+        <button id="cartbutton">Add to Cart</button>
+    </div>
+
+    <script>
+        document.getElementById("nav_container").innerHTML = navBar;
+    </script>
+    <script src="./js/details_page.js"></script>
+</body>
+
+</html>

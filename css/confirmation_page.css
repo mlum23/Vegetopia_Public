@@ -1,0 +1,47 @@
+#image {
+    background-color: #c4c4c4;
+    position: absolute;
+    top: 150px;
+    left: 30px;
+
+    width: 300px;
+    height: 300px;
+    border-radius: 25px;
+}
+
+#image1 {
+    background-color: black;
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    width: 250px;
+    height: 250px;
+    border-radius: 125px;
+}
+
+#description {
+    background-color: #c4c4c4;
+    position: absolute;
+    top: 150px;
+    left: 400px;
+
+    width: 700px;
+    height: 300px;
+    border-radius: 25px;
+}
+
+#add_to_cart {
+    background: #828282;
+    border-radius: 10px;
+    position: absolute;
+    right: 400px;
+    padding: 15px;
+    top: 480px;
+    cursor: pointer;
+}
+
+#total {
+    position: absolute;
+    left: 550px;
+    bottom: 225px;
+}

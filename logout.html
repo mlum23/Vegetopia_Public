@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="./css/nav_bar.css">
+    <script src="https://www.gstatic.com/firebasejs/5.8.5/firebase.js"></script>
+    <script src="./js/database.js"></script>
+    <script src="./js/navBar.js"></script>
+</head>
+
+<body>
+    <div id="nav_container"></div>
+    <h1 style="margin-left: 42.5%;">Logged out</h1>
+    <a  style="margin-left: 41%;" href="index.html">Click to go back to homepage</a>
+
+    <script>
+        document.getElementById("nav_container").innerHTML = navBar;
+    </script>
+</body>
+
+</html>

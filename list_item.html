@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>List item</title>
+    <script src="https://www.gstatic.com/firebasejs/5.8.5/firebase.js"></script>
+    <script src="./js/database.js"></script>
+    <script src="./js/navBar.js"></script>
+    <script src="./js/list_item.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="./css/nav_bar.css">
+    <link rel="stylesheet" type="text/css" href="./css/list_item.css">
+
+
+</head>
+
+<body>
+    <div id="nav_container"></div>
+    <h1>List an Item</h1>
+
+    First name: <input type="text" name="fname" required> <br /> <br />
+    Last name: <input type="text" name="lname" required> <br /> <br />
+    Meetup Locations: <select id="meet_up" onchange="wee()">
+        <option value="">...</option>
+        <option id="east_hastings" value="east_hastings">East Hastings</option>
+        <option id="stanley_park" value="stanley_park">Stanley Park</option>
+        <option id="metrotwon" value="metrotown">Metrotown</option>
+    </select> <br /> <br />
+    Title: <input type="text" id="title_share" name="title_share" required> <br /> <br />
+    Description of Item:<br />
+    <textarea id="description" rows="4" cols="50"></textarea><br />
+
+    <button id="submit_btn" onclick="description()">Submit</button>
+
+    <script>
+        document.getElementById("nav_container").innerHTML = navBar;
+    </script>
+</body>
+
+</html>

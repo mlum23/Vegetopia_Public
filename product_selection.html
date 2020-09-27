@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Product Selection</title>
+    <script src="https://www.gstatic.com/firebasejs/5.8.5/firebase.js"></script>
+    <script src="./js/database.js"></script>
+    <script src="./js/product_selection.js"></script>
+    <script src="./js/navBar.js"></script>
+    <link rel="stylesheet" type="text/css" href="./css/nav_bar.css">
+    <link rel="stylesheet" type="text/css" href="./css/product_selection.css">
+</head>
+
+<body style="overflow: auto">
+    <div id="nav_container"></div>
+    <p id="search_result" style="font-size: 18px">Searching...</p>
+    <div id="added">Item added to cart</div>
+
+    <!--Filter products-->
+    <div id="filter_container">
+        <select id="search_filter" onchange="filter()">
+            <option value="">Sort by...</option>
+            <option value="__pri">Price</option>
+        </select>
+    </div>
+
+    <!--For putting the product boxes (makes deleting them easier...)-->
+    <div id="container"></div>
+    <script>
+        document.getElementById("nav_container").innerHTML = navBar;
+    </script>
+</body>
+
+</html>

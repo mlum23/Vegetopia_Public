@@ -1,0 +1,32 @@
+table,
+th,
+td {
+    border: 1px solid black;
+    padding: 15px;
+    border-collapse: collapse;
+}
+
+#table_container{
+    padding: 2vmax;
+}
+
+button{
+    text-align: center;
+    display: inline-block;
+    margin-left: 2vmax;
+    width: 10vmax;
+    height: 2vmax;
+    font-size: 1vmax;
+    background: #88B58B;
+    color: white;
+    outline: none
+}
+
+button:hover{
+    cursor: pointer;
+    background: rgb(89, 182, 95);
+}
+
+#remove_btn:hover{
+    cursor:pointer;
+}

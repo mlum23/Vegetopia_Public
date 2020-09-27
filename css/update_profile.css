@@ -1,0 +1,24 @@
+#cc,
+#paypal {
+    position: absolute;
+    left: 50%;
+    top: 19%;
+    visibility: hidden;
+}
+
+#billing{
+    position: absolute;
+    left: 30%;
+    top: 19%;
+}
+
+div#added {
+    position: fixed;
+    display: inline-block;
+    right: 0;
+    left: 0;
+    font-size: 22px;
+    background-color: yellow;
+    visibility: hidden;
+    z-index: 1;
+}

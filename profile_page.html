@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://www.gstatic.com/firebasejs/5.8.5/firebase.js"></script>
+    <script src="./js/database.js"></script>
+    <script src="./js/navBar.js"></script>
+    <script src="./js/profile_page.js"></script>
+    <link rel="stylesheet" type="text/css" href="./css/nav_bar.css">
+    <link rel="stylesheet" type="text/css" href="./css/profile_page.css">
+
+
+</head>
+
+<body>
+    <div id="nav_container"></div>
+    <div id="information" style="visibility: hidden">
+        <div id="info_cont">
+            <div id="personal_info">
+                <h2>Personal Info</h2>
+                <div id="name"><b>Name: </b></div>
+                <div id="email"><b>Email: </b></div>
+            </div>
+            <div id="billing_info">
+                <h2>Billing Info</h2>
+                <div id="address"><b>Address: </b></div>
+                <div id="bill_city"><b>City: </b></div>
+                <div id="bill_phone"><b>Phone #: </b></div>
+                <div id="bill_prov"><b>Province: </b></div>
+                <div id="bill_zip"><b>ZIP: </b></div>
+            </div>
+            <div id="payment_info">
+                <h2>Payment Info</h2>
+                <h4>Credit Card</h4>
+                <div id="cc_number"><b>Card Number: </b></div>
+                <div id="cc_expiry"><b>Expiry Date: </b></div>
+                <div id="ccv"><b>CVV: </b></div>
+                <h4>PayPal</h4>
+                <div id="paypal_email"><b>PayPal Email: </b></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("nav_container").innerHTML = navBar;
+    </script>
+</body>
+
+</html>

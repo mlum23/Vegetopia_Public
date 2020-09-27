@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Navigation bar</title>
+    <script src="https://www.gstatic.com/firebasejs/5.8.5/firebase.js"></script>
+    <script src="./js/database.js"></script>
+</head>
+
+<body>
+
+    <body>
+        <div id="write">
+            <p>The serial number is: </p>
+            <p id="result">...</p>
+            <p id="num_child">...</p>
+        </div>
+        <script>
+            function disp_query() {
+                let x = location.search;
+                document.write(x);
+            }
+
+            // Search database to see if user_search exists
+            function check_in_db() {
+                let search_query = location.search;
+                let user_search = search_query.slice(14);
+
+                var dbref = firebase.database().ref("produces");
+
+                dbref.once("value").then(function (snapshot) {
+                    var result = snapshot.child(user_search).exists();
+                    if (result == false) {
+                        document.getElementById("result").innerHTML = "Exists: no";
+                    }
+                    else {  // Return number of items in use_search
+                        document.getElementById("result").innerHTML = "Exists: yes";
+                        var b = snapshot.child(user_search).numChildren();
+                        document.getElementById("num_child").innerHTML = "There are " + b + " produces";  // checks number of child in user_search
+                    }
+                });
+            }
+
+            function check_num_child(user_search) {
+                var dbref = dbref = firebase.database().ref("produces/" + user_search);
+                let counter = 0
+                dbref.on("value", function (snap) {
+                    var list = snap.val();
+                    for (var i in list) {
+                        counter += 1;
+                    }
+
+                })
+                document.getElementById("num_child").innerHTML = counter;
+            }
+
+            disp_query();
+            check_in_db();
+          // check_num_child("egg");
+        </script>
+
+    </body>
+
+</body>
+
+</html>
