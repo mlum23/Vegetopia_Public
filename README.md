@@ -5,7 +5,7 @@ This is a prototype and is not an actual marketplace.
 Demo: https://mlum23.github.io/vegetopia
   
   
-Tech Stack:  
+## Tech Stack:  
 * HTML
 * CSS
 * JavaScript
